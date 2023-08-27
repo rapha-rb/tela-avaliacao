@@ -1,0 +1,47 @@
+<app-complete *ngIf="show"></app-complete>
+<div class="load-background" *ngIf="loader">
+  <div class="spinner-border text-primary loading" role="status" *ngIf="loader">
+    <span class="sr-only"></span>
+  </div>
+</div>
+
+
+<form class="container" #f="ngForm">
+
+  <img class="logo" src="./.././assets/serasa-logo-full.svg" alt="logo da serasa" tabindex="0">
+  <p class="heading-m center" tabindex="0">Conte o quanto você está satisfeito com os nossos serviços</p>
+
+  <div>
+    <label class="heading-s center" tabindex="0">Marque de 1 à 5 em estrelas</label>
+    <div class="center" required name="nota" [(ngModel)]="usuario.nota">
+
+      <img id="star1" title="off" src="./../assets/star-empty.png" (click)="showImg1()"
+        alt="seleciona estrela para nota 1" tabindex="0" />
+
+      <img id="star2" title="off" src="./../assets/star-empty.png" (click)="showImg2()"
+        alt="seleciona estrela para nota 2" tabindex="0" />
+
+      <img id="star3" title="off" src="./../assets/star-empty.png" (click)="showImg3()"
+        alt="seleciona estrela para nota 3" tabindex="0" />
+
+      <img id="star4" title="off" src="./../assets/star-empty.png" (click)="showImg4()"
+        alt="seleciona estrela para nota 4" tabindex="0" />
+
+      <img id="star5" title="off" src="./../assets/star-empty.png" (click)="showImg5()"
+        alt="seleciona estrela para nota 5" tabindex="0" />
+    </div>
+  </div>
+
+  <label class="heading-xs center" for="nome" tabindex="0">Nome</label>
+  <input class="input" id="nome" type="text" name="nome" placeholder="Digite o nome completo" [(ngModel)]="usuario.nome"
+    required #nome="ngModel">
+  <div *ngIf="!nome.valid && nome.touched" class="subheading" tabindex="0">Nome é obrigatório</div>
+
+  <label class="heading-xs center" for="comentario" tabindex="0">Comentário (Opcional)</label>
+  <input class="input" id="comentario" type="text" name="comentario" placeholder="Digite um comentário"
+    [(ngModel)]="usuario.comentario">
+
+  <button class="button light-solid heading-s" type="submit" (click)="btnAction()"
+    data-message="Esse é o botão para enviar a avaliação" [disabled]="!f.valid" tabindex="0">Enviar avaliação</button>
+
+</form>

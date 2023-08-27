@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url("./app/components/text-colors/text-colors.component.css");
+@import url("./app/components/headings/headings.component.css");
+
+* {
+    margin-top: 1.5rem;
+}

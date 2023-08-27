@@ -1,0 +1,23 @@
+.dark-low{
+    color: rgba(0,0,0,0.44);
+}
+
+.dark-medium{
+    color: rgba(0,0,0,0.60);
+}
+
+.dark-high{
+    color: rgba(0,0,0,0.80);
+}
+
+.light-solid{
+    color: #FFFFFF;
+}
+
+.light-high{
+    color: rgba(255,255,255,0.80);
+}
+
+.magenta{
+    color: #E63888;
+}
