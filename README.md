@@ -1,3 +1,6 @@
+![image](https://github.com/rapha-rb/tela-avaliacao/assets/98046855/4985e177-1350-4250-acba-a9f41410a4e1)
+Design responsivo. Testado com leitor NVDA.
+
 # Desafio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
