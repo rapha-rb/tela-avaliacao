@@ -33,30 +33,10 @@ export class PageComponent implements OnInit {
         this.forms = data);
   }
 
-  showImg1(): void {
-    let number = 1;
+  showImg(n: number): void {
+    let number = n;
     this.click(number)
-    this.usuario.nota = "1"
-  }
-  showImg2() {
-    let number = 2;
-    this.click(number)
-    this.usuario.nota = "2"
-  }
-  showImg3() {
-    let number = 3;
-    this.click(number)
-    this.usuario.nota = "3"
-  }
-  showImg4() {
-    let number = 4;
-    this.click(number)
-    this.usuario.nota = "4"
-  }
-  showImg5() {
-    let number = 5;
-    this.click(number)
-    this.usuario.nota = "5"
+    this.usuario.nota = number.toString()
   }
 
   click(number: number) {
